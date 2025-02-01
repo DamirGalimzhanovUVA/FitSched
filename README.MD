@@ -1,0 +1,1 @@
+This is FitSched. The App for HackViolet Hackathon
