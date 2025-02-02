@@ -31,7 +31,7 @@ export default {
       }
     },
     goToSignUp() {
-      window.location.href = "sign-up.html"; // 🔄 Redirect to Sign-Up Page
+      window.location.href = "signup.html"; // 🔄 Redirect to Sign-Up Page
     }
   }
 };

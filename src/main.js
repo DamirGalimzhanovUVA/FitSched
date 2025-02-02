@@ -1,4 +1,6 @@
 import { createApp } from 'vue';
-import Login from './components/Login.vue';
+import FindPartners from './components/FindPartners.vue';
+import Requests from './components/Requests.vue'
 
-createApp(Login).mount('#app');
+createApp(FindPartners).mount('#find_partners');
+createApp(Requests).mount('#requests')

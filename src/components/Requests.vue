@@ -13,18 +13,6 @@
         </li>
       </ul>
     </div>
-
-    <!-- Approved Requests -->
-    <div v-if="approvedRequests.length > 0">
-      <h3>Approved Gym Mates</h3>
-      <ul>
-        <li v-for="(request, index) in approvedRequests" :key="index">
-          <p>{{ request.from }} is now your gym partner! 💪</p>
-        </li>
-      </ul>
-    </div>
-
-    <button @click="goToFindPartners">🔙 Back to Find Partners</button>
   </div>
 </template>
 
@@ -62,9 +50,6 @@ export default {
       localStorage.setItem("requests", JSON.stringify(this.requests));
       alert("You rejected the request!");
       this.loadRequests();
-    },
-    goToFindPartners() {
-      window.location.href = "find-partners.html"; // 🔄 Full reload navigation
     }
   }
 };

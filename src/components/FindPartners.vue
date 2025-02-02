@@ -10,8 +10,7 @@
         </li>
       </ul>
     </div>
-    
-    <button @click="goToRequests">📩 View Requests</button>
+
     <button @click="logout">Logout</button>
   </div>
 </template>
@@ -35,7 +34,7 @@ export default {
       this.allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
 
       if (!this.currentUser) {
-        window.location.href = "index.html"; // 🔄 Redirect to login if not logged in
+        window.location.href = "login.html"; // 🔄 Redirect to login if not logged in
       }
     },
     findMatchingUsers() {
@@ -53,12 +52,9 @@ export default {
       localStorage.setItem("requests", JSON.stringify(requests));
       alert("Request sent!");
     },
-    goToRequests() {
-      window.location.href = "requests.html"; // 🔄 Navigate via full reload
-    },
     logout() {
       localStorage.removeItem("user");
-      window.location.href = "index.html"; // 🔄 Redirect to login
+      window.location.href = "login.html"; // 🔄 Redirect to login
     }
   }
 };
