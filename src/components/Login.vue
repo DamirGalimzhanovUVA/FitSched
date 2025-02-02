@@ -5,7 +5,7 @@
     <input v-model="password" type="password" placeholder="Password">
     <button @click="handleLogin">Login</button>
 
-    <p class="mt-4">Don't have an account?</p>
+    <p>Don't have an account?</p>
     <button @click="goToSignUp">Sign Up</button>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = "find-partners.html"; // 🔄 Full-page reload to Find Partners
+        window.location.href = "find-partners.html"; // 🔄 Redirect to Find Partners
       } else {
         alert("Invalid credentials");
       }
