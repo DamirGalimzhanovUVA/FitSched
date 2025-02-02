@@ -4,6 +4,9 @@
     <input v-model="email" placeholder="Email">
     <input v-model="password" type="password" placeholder="Password">
     <button @click="handleLogin">Login</button>
+
+    <p class="mt-4">Don't have an account?</p>
+    <button @click="goToSignUp">Sign Up</button>
   </div>
 </template>
 
@@ -26,6 +29,9 @@ export default {
       } else {
         alert("Invalid credentials");
       }
+    },
+    goToSignUp() {
+      window.location.href = "sign-up.html"; // 🔄 Redirect to Sign-Up Page
     }
   }
 };
