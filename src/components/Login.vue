@@ -25,7 +25,7 @@ export default {
 
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = "find-partners.html"; // 🔄 Redirect to Find Partners
+        window.location.href = "main_app.html"; // 🔄 Redirect to Find Partners
       } else {
         alert("Invalid credentials");
       }
