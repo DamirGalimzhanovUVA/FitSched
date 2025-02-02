@@ -44,6 +44,7 @@
           <option>Tennis</option>
           <option>Weights</option>
           <option>General Cardio</option>
+          <option>Climbing</option>
         </select>
   
         <button @click="removeSchedule(index)" class="remove-btn">❌</button>
