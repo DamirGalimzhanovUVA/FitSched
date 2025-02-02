@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Login from '../components/Login.vue';
-import Dashboard from '../components/Dashboard.vue';
+import FindPartners from '../components/FindPartners.vue';
 
 const routes = [
   { path: '/', component: Login },
-  { path: '/dashboard', component: Dashboard }
+  { path: '/find-partners', component: FindPartners }
 ];
 
 const router = createRouter({

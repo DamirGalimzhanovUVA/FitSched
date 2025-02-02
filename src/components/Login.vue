@@ -124,10 +124,12 @@ export default {
       }
     },
     handleLogin() {
-      const storedUser = JSON.parse(localStorage.getItem('user'));
+      const storedUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+      const user = storedUsers.find(u => u.email === this.email && u.password === this.password);
 
-      if (storedUser && storedUser.email === this.email && storedUser.password === this.password) {
-        alert("Login successful!");
+      if (user) {
+        localStorage.setItem('user', JSON.stringify(user));
+        this.$router.push('/find-partners');
       } else {
         this.errorMessage = "Invalid credentials";
       }
@@ -140,9 +142,14 @@ export default {
           name: this.name,
           schedules: this.schedules
         };
+
+        let storedUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+        storedUsers.push(newUser);
+        localStorage.setItem('allUsers', JSON.stringify(storedUsers));
         localStorage.setItem('user', JSON.stringify(newUser));
-        alert(`Account created for ${this.name}! You can now log in.`);
-        this.isSignUp = false;
+
+        alert(`Account created for ${this.name}!`);
+        this.$router.push('/find-partners');
       } else {
         this.errorMessage = "All fields and at least one schedule are required!";
       }
