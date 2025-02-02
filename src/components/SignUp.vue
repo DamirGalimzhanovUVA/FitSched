@@ -4,7 +4,6 @@
     <input v-model="name" placeholder="Full Name">
     <input v-model="email" placeholder="Email">
     <input v-model="password" type="password" placeholder="Password">
-
     <h3>Set Your Schedule</h3>
     <Schedule 
       v-for="(schedule, index) in schedules" 

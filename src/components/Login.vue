@@ -1,11 +1,12 @@
 <template>
   <div class="login-container">
-    <h2>Login</h2>
-    <input v-model="email" placeholder="Email">
-    <input v-model="password" type="password" placeholder="Password">
-    <button @click="handleLogin">Login</button>
-
-    <p>Don't have an account?</p>
+    <h1>FitSched</h1>
+    <div id="login-form">    
+      <input v-model="email" placeholder="Email">
+      <input v-model="password" type="password" placeholder="Password">
+      <button @click="handleLogin">Login</button>
+      <p>Don't have an account?</p>
+    </div>
     <button @click="goToSignUp">Sign Up</button>
   </div>
 </template>
@@ -36,3 +37,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  input{
+    display: block; 
+    margin: auto;
+    size: 24px;
+  }
+</style>
